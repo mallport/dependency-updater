@@ -46,7 +46,7 @@ runs:
       run: |
         ${{ github.action_path }}/autoupdate-dependencies.sh \
         ${{ inputs.token }} \
-        ${{ update_command }} \
-        ${{default_branch }}\
+        ${ update_command } \
+        ${ default_branch } \
         "${{ inputs.update-path }}?" \
         "${{ inputs.on-changes-command }}?"
