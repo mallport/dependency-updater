@@ -20,11 +20,8 @@ inputs:
   on-changes-command:
     description: Command to run if dependencies update and changes were detected. This can be version increments or extra checks.
     required: false
-
-jobs:
-  update-dependencies-python:
-    if: inputs.language == 'python-poetry'
-    runs-on: ubuntu-latest
+  runs:
+    using: 'composite'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v1
